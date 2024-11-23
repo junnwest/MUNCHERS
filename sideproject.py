@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-file_path = "C:/Users/김태헌/Desktop/FOODFIGHTER/foodData123.xlsx"
+file_path = "foodData123.xlsx"
 data = pd.ExcelFile(file_path)
 
 
@@ -26,14 +26,18 @@ ingredient_counts['indigenous_index'] = ingredient_counts['count'] / ingredient_
 print(ingredient_counts.head())
 
 
-output_file_path = "C:/Users/김태헌/Desktop/FOODFIGHTER/foodData123.xlsx"
+output_file_path = "foodData123.xlsx"
 
 
+def calculate_cuisine_scores(row):
+    ingredients = eval(row['Ingredients'])  # Convert string back to list
+    scores = []
+    for cuisine in ingredient_counts['cuisine'].unique():
+        score = ingredient_counts[(ingredient_counts['Ingredients'].isin(ingredients)) & 
+                                  (ingredient_counts['cuisine'] == cuisine)]['indigenous_index'].sum()
+        scores.append(score)
+    return scores
 
-
-#export to excel as a new sheet
-with pd.ExcelWriter(output_file_path, mode='a', engine='openpyxl') as writer:
-    ingredient_counts.to_excel(writer, sheet_name='Ingredient_Analysis', index=False)
-
-
-print("Exported ingredient_counts to a new sheet named 'Ingredient_Analysis'")
+# Apply function to calculate scores for each food
+combined_data['cuisine_scores'] = combined_data.apply(calculate_cuisine_scores, axis=1)
+print(combined_data[['cuisine', 'cuisine_scores']].head())  # Inspect the scores
