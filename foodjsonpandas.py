@@ -3,7 +3,7 @@ import json
 import random as rand
 
 # Filepath to your JSON data
-filepath1 = r'C:/Users/김태헌/Desktop/FOODFIGHTER/files/archive/train.json'
+filepath1 = r'~/MUNCHERS/train.json'
 
 # Load the JSON data into a pandas DataFrame
 foodData = pd.read_json(filepath1)
@@ -42,14 +42,3 @@ with pd.ExcelWriter('foodData123.xlsx', engine='openpyxl', mode='a') as writer:
     for cuisine_name, cuisine_data in cuisine_samples:
         # Directly write the sample dataframe for each cuisine to a new sheet
         cuisine_data.to_excel(writer, sheet_name=cuisine_name, index=False)
-
-
-
-
-
-
-
-
-
-
-
