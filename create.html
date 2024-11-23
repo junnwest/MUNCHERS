@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i create</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+    <!--logo-->
+    <a href="index.html" class="logo">
+    yang<br>kenneth<br>junseo
+    </a>
+
+    <!--menu bar-->
+    <div class="vertical-menu">
+    <a href="index.html" class="menu-item" id="home">
+        <div class="icon">🏠</div>
+    </a>
+    <a href="me.html" class="menu-item" id="me">
+        <div class="icon">❓</div>
+    </a>
+    <a href="create.html" class="menu-item" id="create">
+        <div class="icon">🎨</div>
+    </a>
+    <a href="travel.html" class="menu-item" id="travel">
+        <div class="icon">✈️</div>
+    </a>
+    <a href="listen.html" class="menu-item" id="listen">
+        <div class="icon">🎧</div>
+    </a>
+    </div>
+
+    <script>
+    // Get all menu items
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    // Get the current URL's path (e.g., 'me.html')
+    const currentPath = window.location.pathname.split('/').pop();
+
+    // Loop through menu items and add 'active' to the matching one
+    menuItems.forEach(item => {
+        const href = item.getAttribute('href'); // Get the link
+        if (href === currentPath) {
+            item.classList.add('active'); // Mark as active
+        } else {
+            item.classList.remove('active'); // Remove active class from others
+        }
+    });
+
+    // Debugging (Optional): Log the current path to ensure it's correct
+    console.log('Current Path:', currentPath);
+</script>
+</body>
+</html>
