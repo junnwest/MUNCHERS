@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me</title>
+    <link rel="stylesheet" href="me.css">
+    
+</head>
+<body>
+  <!-- Header Section -->
+  <a href="index.html" class="logo">
+    yang<br>kenneth<br>junseo
+  </a>
+  <div class="intro-text">
+    <p>Welcome :D</p>
+    <p>This is Kenneth Yang <br> and this is a part of me.</p>
+  </div>
+  <div class="page-title">?ME</div>
+
+  <!-- Main Content Section -->
+  <main class="profile-container">
+    <div class="profile-picture">
+      <img src="photos/me2.png" alt="Jun-Seo Yang">
+    </div>
+  </main>
+
+
+  <!-- Military Datasheet -->
+  <div class="datasheet">
+    <h1>PERSONAL DATA SHEET</h1>
+    <pre>
+    NAME:       Jun-Seo Yang
+    PREFERRED NAME:     Kenneth
+    AGE:        20
+    BIRTHDAY:   23rd FEB 2004
+    LANGUAGES:  Korean, English, Japanese
+    I LIKE:     Creating, Travelling, Listening
+    ACADEMIC INTEREST: AI, Data Science, Philosophy
+    HAIR:       Black
+    EYES:       Brown
+    HEIGHT:     5'10"
+    WEIGHT:     154 lbs
+    RELIGION:   N/A
+    BLOOD TYPE: O
+    RANK:       Senior Airman
+    SERVICE:    Republic of Korea Air Force
+    DATE OF ENLISTMENT: 30th OCT 2023
+    DATE OF DISCHARGE:  29th JUL 2025
+    STATION:    OSAN AB
+    UNIT:       AFOC MP Squadron
+    </pre>
+  </div>
+
+  <div class="vertical-menu">
+    <a href="index.html" class="menu-item" id="home">
+        <div class="icon">🏠</div>
+    </a>
+    <a href="me.html" class="menu-item" id="me">
+        <div class="icon">❓</div>
+    </a>
+    <a href="create.html" class="menu-item" id="create">
+        <div class="icon">🎨</div>
+    </a>
+    <a href="travel.html" class="menu-item" id="travel">
+        <div class="icon">✈️</div>
+    </a>
+    <a href="listen.html" class="menu-item" id="listen">
+        <div class="icon">🎧</div>
+    </a>
+  </div>
+
+  <script>
+    // Get all menu items
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    // Get the current URL's path (e.g., 'me.html')
+    const currentPath = window.location.pathname.split('/').pop();
+
+    // Loop through menu items and add 'active' to the matching one
+    menuItems.forEach(item => {
+        const href = item.getAttribute('href'); // Get the link
+        if (href === currentPath) {
+            item.classList.add('active'); // Mark as active
+        } else {
+            item.classList.remove('active'); // Remove active class from others
+        }
+    });
+
+    // Debugging (Optional): Log the current path to ensure it's correct
+    console.log('Current Path:', currentPath);
+</script>
+</body>
+</html>

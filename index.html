@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+        yang<br>kenneth<br>junseo
+    </a>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="text" id="create">Create / Create <br> Create / Create <br> Create / Create <br> Create / Create <br> Create / Create</div>
+        <div class="text" id="travel">Travel / World <br> Travel / World <br> Travel / World <br> Travel / World <br> Travel / World</div>
+        <div class="text" id="me" onclick="window.location.href='me.html'">?ME</div>
+        <div class="text" id="listen">Listen / MUSIC <br> Listen / MUSIC <br> Listen / MUSIC <br> Listen / MUSIC <br> Listen / MUSIC</div>
+        <div class="text" id="life">Life of Yang <br> Life of Yang <br> Life of Yang</div>
+        <div class="text" id="I">I:</div>
+        <!-- Photos -->
+        <img src="photos/main2.png" alt="Photo 1" class="photo" id="photo1">
+        <img src="photos/main3.png" alt="Photo 2" class="photo" id="photo2">
+        <img src="photos/main4.png" alt="Photo 3" class="photo" id="photo3">
+    </div>
+    <div class="vertical-menu">
+        <a href="index.html" class="menu-item">
+            <div class="icon">🏠</div>
+        </a>
+        <a href="me.html" class="menu-item">
+            <div class="icon">❓</div>
+        </a>
+        <a href="create.html" class="menu-item" id="create">
+            <div class="icon">🎨</div>
+        </a>
+        <a href="travel.html" class="menu-item" id="travel">
+            <div class="icon">✈️</div>
+        </a>
+        <a href="listen.html" class="menu-item" id="listen">
+            <div class="icon">🎧</div>
+        </a>
+    </div>
+
+    <script>
+        // Get all menu items
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        // Get the current URL's path (e.g., 'me.html')
+        const currentPath = window.location.pathname.split('/').pop();
+
+        // Loop through menu items and add 'active' to the matching one
+        menuItems.forEach(item => {
+            const href = item.getAttribute('href'); // Get the link
+            if (href === currentPath) {
+                item.classList.add('active'); // Mark as active
+            } else {
+                item.classList.remove('active'); // Remove active class from others
+            }
+        });
+
+        // Debugging (Optional): Log the current path to ensure it's correct
+        console.log('Current Path:', currentPath);
+    </script>
+</body>
+</html>

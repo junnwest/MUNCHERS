@@ -1,0 +1,133 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #412517;
+}
+
+/* Header Section */
+.logo {
+  display: inline-block; /* Makes the logo content treated like a block */
+  padding: 15px; /* Inner spacing inside the square */
+  background-color: #f58b57; /* Square background color */
+  color: #412517;
+  text-align: end;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline for link */
+  line-height: 1.5; /* Space between lines */
+  margin: 5px;
+}
+
+.logo:hover {
+  text-decoration: line-through;
+}
+
+/* Main Content Section */
+.profile-container {
+  position: absolute;
+  top: 220px;
+  left: 200px;
+}
+
+.profile-picture img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.page-title {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 0; /* Align to the left */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  writing-mode: vertical-lr; /* Write text vertically */
+  text-orientation: mixed; /* Proper orientation for mixed characters */
+  font-size: 30px; /* Font size for the title */
+  font-weight: bold; /* Bold text */
+  color: #412517; /* Title text color */
+  padding-left: 10px; /* Spacing from the edge */
+}
+
+.intro-text {
+  position: absolute;
+  top: 430px;
+  left: 200px;
+  text-align: center; /* Center-align text */
+  font-size: 20px; /* Size of the introduction text */
+  color: black; 
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.intro-text p {
+  margin: 20px 0; /* Space between the lines */
+}
+
+/* Datasheet Section */
+.datasheet {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  width: 600px;
+  color: white; 
+  max-width: 90%; /* Ensure it fits on smaller screens */
+  background: #212A37;
+  padding: 20px;
+  text-align: left;
+  max-height: 400px; /* Set a fixed height for the scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.datasheet h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 2px; /* Wide spacing for a formal feel */
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.datasheet pre {
+  font-size: 18px;
+  line-height: 1.8;
+  white-space: pre-wrap; /* Ensures text wraps on smaller screens */
+  font-family: "Courier New", Courier, monospace;
+}
+
+
+/* Vertical Menu */
+.vertical-menu {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #7acec2;
+}
+/* Menu Item (Anchor Tag Styling) */
+.menu-item {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none; /* Remove underline from links */
+  font-size: 24px; /* Adjust icon size */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Current Page Indicator (Active State) */
+.menu-item.active {
+  background-color: white;
+  color: black;
+}
+
+/* Hover Effect */
+.menu-item:hover {
+  background-color: #e6dfcc;
+  color: white;
+}
