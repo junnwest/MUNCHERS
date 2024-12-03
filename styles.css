@@ -1,0 +1,154 @@
+/* General Styling */
+body {
+  margin: 0;
+  background-color: #f58b57;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #412517;
+  overflow: hidden;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: end;
+  font-size: 16px;
+  font-weight: bold;
+  color: #412517;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.logo:hover {
+  text-decoration: line-through;
+}
+
+/* Content Container */
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Text Elements */
+.text {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Individual Text Positioning */
+#me {
+  top: 30px;
+  left: 20%;
+  font-size: 50px;
+  z-index: 1;
+}
+#life {
+  top: 30px;
+  left: 60%;
+  font-size: 50px;
+}
+
+#create {
+  top: 500px;
+  left: 10%;
+  line-height: 30px;
+  z-index: 1;
+}
+
+#travel {
+  top: 500px;
+  left: 40%;
+  line-height: 30px;
+}
+
+#listen {
+  top: 500px;
+  left: 70%;
+}
+
+#I {
+  top: 350px;
+  left: 5%;
+  scale: 300%;
+}
+
+
+
+/* Photo Styling */
+.photo {
+  position: absolute;
+  width: 150px; /* Default size; can be adjusted */
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Individual Photo Positioning */
+#photo1 {
+  top: 110px;
+  left: 50%;
+  scale: 200%
+}
+
+#photo2 {
+  top: 220px;
+  left: 35%;
+  scale: 200%
+}
+
+#photo3 {
+  top: 230px;
+  left: 60%;
+  scale: 150%;
+}
+
+/* Hover Effects for Texts and Photos */
+.text:hover {
+  transform: scale(1.2);
+  font-size: 28px;
+  z-index: 1;
+}
+
+
+/* Vertical Menu */
+.vertical-menu {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #7acec2;
+}
+/* Menu Item (Anchor Tag Styling) */
+.menu-item {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none; /* Remove underline from links */
+  font-size: 24px; /* Adjust icon size */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Current Page Indicator (Active State) */
+.menu-item.active {
+  background-color: white;
+  color: black;
+}
+
+/* Hover Effect */
+.menu-item:hover {
+  background-color: #e6dfcc;
+  color: white;
+}
+

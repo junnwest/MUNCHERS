@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i create</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+    <!--logo-->
+    <a href="index.html" class="logo">
+    yang<br>kenneth<br>junseo
+    </a>
+
+    <div class="page-title">CREATE / CREATE</div>
+
+    <div>Soombi St.</div>
+    <p class="paragraph">Soombi Street was born from the inspiration of Jeju’s haenyo—the resilient female freedivers who have harvested from the island’s waters for centuries. Combining my admiration for their tradition and my fascination with sustainability, I set out to create eco-friendly wallets and bags using Neoprene scraps from local wetsuit manufacturers. After months of persistence and building relationships, I transformed discarded materials into functional, handcrafted designs. Soombi Street, named after the sooombi sound of haenyo surfacing for air, represents not only a celebration of heritage but also a commitment to creativity and sustainable craftsmanship.</p>
+
+    <div>Orange and Mustard</div>
+    <p class="paragraph">Orange and Mustard is my YouTube channel, a curated playlist hub that showcases a wide range of music genres, including R&B, hip-hop, lo-fi jazz, and alternative tracks. It’s a space where music lovers can explore diverse sounds and vibes. I produce all content using Premiere Pro and After Effects, crafting visuals that complement the music and elevate the listening experience. Orange and Mustard is a creative outlet for sharing my passion for music and design with the world.</p>
+
+    <div>Uporic</div>
+    <p class="paragraph">Uporic is a blockchain-based platform that initially served as an NFT trading platform and a Genuine Certification System. It also offers a registration service, assigning proof of ownership and facilitating the secure transfer of ownership. I contributed to Uporic by designing its logo and creating the UI/UX design for the website, ensuring a seamless and visually engaging user experience to complement its innovative blockchain services.</p>
+
+    <div>Orange Films</div>
+    <p class="paragraph">As I bought my first camera, the RICOH GR-II, I began documenting my travels around the world on Orange Films, my personal Instagram page. What started with capturing moments on the GR-II grew into a passion for film photography, using everything from disposable cameras to the Olympus OM-1. Each photo reflects my journey, blending the timeless nostalgia of film with the spontaneity of exploration.</p>
+
+    <div>Drawing</div>
+
+    <!--menu bar-->
+    <div class="vertical-menu">
+    <a href="index.html" class="menu-item" id="home">
+        <div class="icon">🏠</div>
+    </a>
+    <a href="me.html" class="menu-item" id="me">
+        <div class="icon">❓</div>
+    </a>
+    <a href="create.html" class="menu-item" id="create">
+        <div class="icon">🎨</div>
+    </a>
+    <a href="travel.html" class="menu-item" id="travel">
+        <div class="icon">✈️</div>
+    </a>
+    <a href="listen.html" class="menu-item" id="listen">
+        <div class="icon">🎧</div>
+    </a>
+    </div>
+
+    <script>
+    // Get all menu items
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    // Get the current URL's path (e.g., 'me.html')
+    const currentPath = window.location.pathname.split('/').pop();
+
+    // Loop through menu items and add 'active' to the matching one
+    menuItems.forEach(item => {
+        const href = item.getAttribute('href'); // Get the link
+        if (href === currentPath) {
+            item.classList.add('active'); // Mark as active
+        } else {
+            item.classList.remove('active'); // Remove active class from others
+        }
+    });
+
+    // Debugging (Optional): Log the current path to ensure it's correct
+    console.log('Current Path:', currentPath);
+</script>
+</body>
+</html>
